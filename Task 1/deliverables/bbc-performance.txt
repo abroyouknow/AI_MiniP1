@@ -1,0 +1,260 @@
+============= MultinomialNB, default values, try 1 =============
+
+Confusion Matrix:
+
+[[109   0   3   0   4]
+ [  1  63   1   0   3]
+ [  2   0  84   0   0]
+ [  1   0   0  93   0]
+ [  0   0   1   0  80]]
+
+Classification Report:
+
+               precision    recall  f1-score   support
+
+     business       0.96      0.94      0.95       116
+entertainment       1.00      0.93      0.96        68
+     politics       0.94      0.98      0.96        86
+        sport       1.00      0.99      0.99        94
+         tech       0.92      0.99      0.95        81
+
+     accuracy                           0.96       445
+    macro avg       0.97      0.96      0.96       445
+ weighted avg       0.97      0.96      0.96       445
+
+Prior Probabilities:
+
+	business             0.22135
+	entertainment        0.17865
+	politics             0.18596
+	sport                0.23427
+	tech                 0.17978
+
+Vocabulary Size:
+
+	29421 words
+
+Total word-tokens per class:
+
+	business             164663    
+	entertainment        124893    
+	politics             185208    
+	sport                162953    
+	tech                 198640    
+
+Total word-tokens in entire corpus:
+
+	836357 words
+
+Number of words with frequency of zero in each class:
+
+	business             17538    (59.61 %)
+	entertainment        17746    (60.32 %)
+	politics             18201    (61.86 %)
+	sport                18850    (64.07 %)
+	tech                 17323    (58.88 %)
+
+Number of words with frequency of one in entire corpus:
+
+	10005 words (34.01 %)
+
+Log (base e) probability of our 2 favorite words:
+
+	cat        -1.70368
+	dog        -1.21117
+
+============= MultinomialNB, default values, try 2 =============
+
+Confusion Matrix:
+
+[[109   0   3   0   4]
+ [  1  63   1   0   3]
+ [  2   0  84   0   0]
+ [  1   0   0  93   0]
+ [  0   0   1   0  80]]
+
+Classification Report:
+
+               precision    recall  f1-score   support
+
+     business       0.96      0.94      0.95       116
+entertainment       1.00      0.93      0.96        68
+     politics       0.94      0.98      0.96        86
+        sport       1.00      0.99      0.99        94
+         tech       0.92      0.99      0.95        81
+
+     accuracy                           0.96       445
+    macro avg       0.97      0.96      0.96       445
+ weighted avg       0.97      0.96      0.96       445
+
+Prior Probabilities:
+
+	business             0.22135
+	entertainment        0.17865
+	politics             0.18596
+	sport                0.23427
+	tech                 0.17978
+
+Vocabulary Size:
+
+	29421 words
+
+Total word-tokens per class:
+
+	business             164663    
+	entertainment        124893    
+	politics             185208    
+	sport                162953    
+	tech                 198640    
+
+Total word-tokens in entire corpus:
+
+	836357 words
+
+Number of words with frequency of zero in each class:
+
+	business             17538    (59.61 %)
+	entertainment        17746    (60.32 %)
+	politics             18201    (61.86 %)
+	sport                18850    (64.07 %)
+	tech                 17323    (58.88 %)
+
+Number of words with frequency of one in entire corpus:
+
+	10005 words (34.01 %)
+
+Log (base e) probability of our 2 favorite words:
+
+	cat        -1.70368
+	dog        -1.21117
+
+============= MultinomialNB, smoothing = 0.0001 =============
+
+Confusion Matrix:
+
+[[108   0   5   0   3]
+ [  0  66   1   0   1]
+ [  2   0  84   0   0]
+ [  1   0   0  93   0]
+ [  1   0   1   0  79]]
+
+Classification Report:
+
+               precision    recall  f1-score   support
+
+     business       0.96      0.93      0.95       116
+entertainment       1.00      0.97      0.99        68
+     politics       0.92      0.98      0.95        86
+        sport       1.00      0.99      0.99        94
+         tech       0.95      0.98      0.96        81
+
+     accuracy                           0.97       445
+    macro avg       0.97      0.97      0.97       445
+ weighted avg       0.97      0.97      0.97       445
+
+Prior Probabilities:
+
+	business             0.22135
+	entertainment        0.17865
+	politics             0.18596
+	sport                0.23427
+	tech                 0.17978
+
+Vocabulary Size:
+
+	29421 words
+
+Total word-tokens per class:
+
+	business             164663    
+	entertainment        124893    
+	politics             185208    
+	sport                162953    
+	tech                 198640    
+
+Total word-tokens in entire corpus:
+
+	836357 words
+
+Number of words with frequency of zero in each class:
+
+	business             17538    (59.61 %)
+	entertainment        17746    (60.32 %)
+	politics             18201    (61.86 %)
+	sport                18850    (64.07 %)
+	tech                 17323    (58.88 %)
+
+Number of words with frequency of one in entire corpus:
+
+	10005 words (34.01 %)
+
+Log (base e) probability of our 2 favorite words:
+
+	cat        -1.70368
+	dog        -1.21117
+
+============= MultinomialNB, smoothing = 0.9 =============
+
+Confusion Matrix:
+
+[[109   0   3   0   4]
+ [  1  63   1   0   3]
+ [  2   0  84   0   0]
+ [  1   0   0  93   0]
+ [  0   0   1   0  80]]
+
+Classification Report:
+
+               precision    recall  f1-score   support
+
+     business       0.96      0.94      0.95       116
+entertainment       1.00      0.93      0.96        68
+     politics       0.94      0.98      0.96        86
+        sport       1.00      0.99      0.99        94
+         tech       0.92      0.99      0.95        81
+
+     accuracy                           0.96       445
+    macro avg       0.97      0.96      0.96       445
+ weighted avg       0.97      0.96      0.96       445
+
+Prior Probabilities:
+
+	business             0.22135
+	entertainment        0.17865
+	politics             0.18596
+	sport                0.23427
+	tech                 0.17978
+
+Vocabulary Size:
+
+	29421 words
+
+Total word-tokens per class:
+
+	business             164663    
+	entertainment        124893    
+	politics             185208    
+	sport                162953    
+	tech                 198640    
+
+Total word-tokens in entire corpus:
+
+	836357 words
+
+Number of words with frequency of zero in each class:
+
+	business             17538    (59.61 %)
+	entertainment        17746    (60.32 %)
+	politics             18201    (61.86 %)
+	sport                18850    (64.07 %)
+	tech                 17323    (58.88 %)
+
+Number of words with frequency of one in entire corpus:
+
+	10005 words (34.01 %)
+
+Log (base e) probability of our 2 favorite words:
+
+	cat        -1.70368
+	dog        -1.21117
+
