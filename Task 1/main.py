@@ -23,11 +23,11 @@ def create_distribution_graph():
     for classDir in classes:
         frequencies.append(len(os.listdir(data_path + classDir)))
 
-    if not os.path.isfile(deliverables_path + 'BBC-distribution.pdf'):
+    if not os.path.isfile(deliverables_path + 'bbc-distribution.pdf'):
         fig = plt.figure()
         plt.bar(classes, frequencies)
         plt.show()
-        fig.savefig(deliverables_path + 'BBC-distribution.pdf', dpi=fig.dpi)
+        fig.savefig(deliverables_path + 'bbc-distribution.pdf', dpi=fig.dpi)
 
     return classes
 
@@ -98,8 +98,8 @@ def print_stats(section_name, all_data, all_target, training_target, test_target
         num_words_one = np.count_nonzero(rows_total == 1)
         return num_words_one
 
-    def calc_word_log_prob(word):
-        return math.log(vectorizer.vocabulary_[word] / all_data.shape[1])
+    def calc_word_log_prob(word, total_word_tokens):
+        return math.log(vectorizer.vocabulary_[word] / total_word_tokens)
 
     print("============= {} =============\n".format(section_name))
     print("Confusion Matrix:\n")
@@ -135,8 +135,8 @@ def print_stats(section_name, all_data, all_target, training_target, test_target
           .format(num_words_one, 100 * num_words_one / vocab_size))
 
     print("\nLog (base e) probability of our 2 favorite words:\n")
-    cat_prob = calc_word_log_prob('cat')
-    dog_prob = calc_word_log_prob('dog')
+    cat_prob = calc_word_log_prob('cat', total_word_tokens)
+    dog_prob = calc_word_log_prob('dog', total_word_tokens)
     print("\t{:10} {:.5f}".format("cat", cat_prob))
     print("\t{:10} {:.5f}".format("dog", dog_prob))
     print()

@@ -2,33 +2,33 @@
 
 Confusion Matrix:
 
-[[109   0   3   0   4]
- [  1  63   1   0   3]
- [  2   0  84   0   0]
- [  1   0   0  93   0]
- [  0   0   1   0  80]]
+[[ 93   0   1   0   3]
+ [  0  71   1   0   2]
+ [  0   1  84   0   0]
+ [  0   0   0 107   0]
+ [  0   0   1   0  81]]
 
 Classification Report:
 
                precision    recall  f1-score   support
 
-     business       0.96      0.94      0.95       116
-entertainment       1.00      0.93      0.96        68
-     politics       0.94      0.98      0.96        86
-        sport       1.00      0.99      0.99        94
-         tech       0.92      0.99      0.95        81
+     business       1.00      0.96      0.98        97
+entertainment       0.99      0.96      0.97        74
+     politics       0.97      0.99      0.98        85
+        sport       1.00      1.00      1.00       107
+         tech       0.94      0.99      0.96        82
 
-     accuracy                           0.96       445
-    macro avg       0.97      0.96      0.96       445
- weighted avg       0.97      0.96      0.96       445
+     accuracy                           0.98       445
+    macro avg       0.98      0.98      0.98       445
+ weighted avg       0.98      0.98      0.98       445
 
 Prior Probabilities:
 
-	business             0.22135
-	entertainment        0.17865
-	politics             0.18596
-	sport                0.23427
-	tech                 0.17978
+	business             0.23202
+	entertainment        0.17528
+	politics             0.18652
+	sport                0.22697
+	tech                 0.17921
 
 Vocabulary Size:
 
@@ -60,40 +60,40 @@ Number of words with frequency of one in entire corpus:
 
 Log (base e) probability of our 2 favorite words:
 
-	cat        -1.70368
-	dog        -1.21117
+	cat        -5.05102
+	dog        -4.55852
 
 ============= MultinomialNB, default values, try 2 =============
 
 Confusion Matrix:
 
-[[109   0   3   0   4]
- [  1  63   1   0   3]
- [  2   0  84   0   0]
- [  1   0   0  93   0]
- [  0   0   1   0  80]]
+[[ 93   0   1   0   3]
+ [  0  71   1   0   2]
+ [  0   1  84   0   0]
+ [  0   0   0 107   0]
+ [  0   0   1   0  81]]
 
 Classification Report:
 
                precision    recall  f1-score   support
 
-     business       0.96      0.94      0.95       116
-entertainment       1.00      0.93      0.96        68
-     politics       0.94      0.98      0.96        86
-        sport       1.00      0.99      0.99        94
-         tech       0.92      0.99      0.95        81
+     business       1.00      0.96      0.98        97
+entertainment       0.99      0.96      0.97        74
+     politics       0.97      0.99      0.98        85
+        sport       1.00      1.00      1.00       107
+         tech       0.94      0.99      0.96        82
 
-     accuracy                           0.96       445
-    macro avg       0.97      0.96      0.96       445
- weighted avg       0.97      0.96      0.96       445
+     accuracy                           0.98       445
+    macro avg       0.98      0.98      0.98       445
+ weighted avg       0.98      0.98      0.98       445
 
 Prior Probabilities:
 
-	business             0.22135
-	entertainment        0.17865
-	politics             0.18596
-	sport                0.23427
-	tech                 0.17978
+	business             0.23202
+	entertainment        0.17528
+	politics             0.18652
+	sport                0.22697
+	tech                 0.17921
 
 Vocabulary Size:
 
@@ -125,40 +125,40 @@ Number of words with frequency of one in entire corpus:
 
 Log (base e) probability of our 2 favorite words:
 
-	cat        -1.70368
-	dog        -1.21117
+	cat        -5.05102
+	dog        -4.55852
 
 ============= MultinomialNB, smoothing = 0.0001 =============
 
 Confusion Matrix:
 
-[[108   0   5   0   3]
- [  0  66   1   0   1]
- [  2   0  84   0   0]
- [  1   0   0  93   0]
- [  1   0   1   0  79]]
+[[ 90   1   2   0   4]
+ [  1  71   0   0   2]
+ [  0   0  85   0   0]
+ [  0   0   0 107   0]
+ [  0   0   1   0  81]]
 
 Classification Report:
 
                precision    recall  f1-score   support
 
-     business       0.96      0.93      0.95       116
-entertainment       1.00      0.97      0.99        68
-     politics       0.92      0.98      0.95        86
-        sport       1.00      0.99      0.99        94
-         tech       0.95      0.98      0.96        81
+     business       0.99      0.93      0.96        97
+entertainment       0.99      0.96      0.97        74
+     politics       0.97      1.00      0.98        85
+        sport       1.00      1.00      1.00       107
+         tech       0.93      0.99      0.96        82
 
-     accuracy                           0.97       445
-    macro avg       0.97      0.97      0.97       445
- weighted avg       0.97      0.97      0.97       445
+     accuracy                           0.98       445
+    macro avg       0.97      0.98      0.97       445
+ weighted avg       0.98      0.98      0.98       445
 
 Prior Probabilities:
 
-	business             0.22135
-	entertainment        0.17865
-	politics             0.18596
-	sport                0.23427
-	tech                 0.17978
+	business             0.23202
+	entertainment        0.17528
+	politics             0.18652
+	sport                0.22697
+	tech                 0.17921
 
 Vocabulary Size:
 
@@ -190,40 +190,40 @@ Number of words with frequency of one in entire corpus:
 
 Log (base e) probability of our 2 favorite words:
 
-	cat        -1.70368
-	dog        -1.21117
+	cat        -5.05102
+	dog        -4.55852
 
 ============= MultinomialNB, smoothing = 0.9 =============
 
 Confusion Matrix:
 
-[[109   0   3   0   4]
- [  1  63   1   0   3]
- [  2   0  84   0   0]
- [  1   0   0  93   0]
- [  0   0   1   0  80]]
+[[ 93   0   1   0   3]
+ [  0  71   1   0   2]
+ [  0   1  84   0   0]
+ [  0   0   0 107   0]
+ [  0   0   1   0  81]]
 
 Classification Report:
 
                precision    recall  f1-score   support
 
-     business       0.96      0.94      0.95       116
-entertainment       1.00      0.93      0.96        68
-     politics       0.94      0.98      0.96        86
-        sport       1.00      0.99      0.99        94
-         tech       0.92      0.99      0.95        81
+     business       1.00      0.96      0.98        97
+entertainment       0.99      0.96      0.97        74
+     politics       0.97      0.99      0.98        85
+        sport       1.00      1.00      1.00       107
+         tech       0.94      0.99      0.96        82
 
-     accuracy                           0.96       445
-    macro avg       0.97      0.96      0.96       445
- weighted avg       0.97      0.96      0.96       445
+     accuracy                           0.98       445
+    macro avg       0.98      0.98      0.98       445
+ weighted avg       0.98      0.98      0.98       445
 
 Prior Probabilities:
 
-	business             0.22135
-	entertainment        0.17865
-	politics             0.18596
-	sport                0.23427
-	tech                 0.17978
+	business             0.23202
+	entertainment        0.17528
+	politics             0.18652
+	sport                0.22697
+	tech                 0.17921
 
 Vocabulary Size:
 
@@ -255,6 +255,6 @@ Number of words with frequency of one in entire corpus:
 
 Log (base e) probability of our 2 favorite words:
 
-	cat        -1.70368
-	dog        -1.21117
+	cat        -5.05102
+	dog        -4.55852
 
