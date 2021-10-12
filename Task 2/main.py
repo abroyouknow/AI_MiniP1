@@ -1,4 +1,6 @@
 import os
+import sys
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -151,9 +153,18 @@ def test_gridcv_using_mlp(high_preformance_mlp_classifier, test_data):
 
 
 # Print statistics relating to a prediction
-def print_stats(actual, prediction, target_names):
-    print(confusion_matrix(actual, prediction))
-    print(classification_report(actual, prediction, target_names=target_names))
+def print_stats(test_target, prediction, target_names, section_name, best_params=None):
+    print("============= {} =============\n".format(section_name))
+    if best_params is not None:
+        print("Grid CV parameters:\n")
+        print(best_params)
+        print("")
+    print("Confusion Matrix:\n")
+    print(confusion_matrix(test_target, prediction))
+    print("")
+
+    print("Classification Report:\n")
+    print(classification_report(test_target, prediction, target_names=target_names))
 
 
 def main():
@@ -164,59 +175,51 @@ def main():
     data_set, data_target = convert_to_matrix_and_split(data)
     training_data, test_data, training_target, test_target = split_data_set(data_set, data_target)
 
-    print("----------------------------------")
-    print("Naive Bayes Model")
-    print("----------------------------------")
+    # Open output file and redirect stdout to it
+    out_file = open(deliverables_path + 'drug-performance.txt', 'w')
+    sys.stdout = out_file
+
+    # Train & predict using MultinomialNB
     nb_classifier = train_naive_bayes(training_data, training_target)
     prediction = test_naive_bayes(nb_classifier, test_data)
-    print_stats(prediction, test_target, classes_name)
+    print_stats(test_target, prediction, classes_name, "MultinomialNB")
 
-    print("----------------------------------")
-    print("Decision Tree")
-    print("----------------------------------")
+    # Train & predict using Decision Tree
     dt_classifier = train_decision_tree(training_data, training_target)
     prediction = test_decision_tree(dt_classifier, test_data)
-    print_stats(prediction, test_target, classes_name)
+    print_stats(test_target, prediction, classes_name, "Decision Tree")
 
-    print("----------------------------------")
-    print("High Performance Decision Tree")
-    print("----------------------------------")
+    # Train & predict using high performance Decision Tree
     high_performance_classifier = gridcv_using_decision_tree(training_data, training_target)
     prediction = test_gridcv_using_decision_tree(high_performance_classifier, test_data)
-    print(high_performance_classifier.best_params_)
-    print_stats(prediction, test_target, classes_name)
+    print_stats(test_target, prediction, classes_name, "High Performance Decision Tree",
+                high_performance_classifier.best_params_)
 
     # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
     #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-    print("----------------------------------")
-    print("Perceptron")
-    print("----------------------------------")
+    # Train & predict using Perceptron
     p_classifier = train_perceptron(training_data, training_target)
     prediction = test_perceptron(p_classifier, test_data)
-    print_stats(prediction, test_target, classes_name)
+    print_stats(test_target, prediction, classes_name, "Perceptron")
 
     # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
     #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
     # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
     #  the optimization hasn't converged yet. warnings.warn(
-    print("----------------------------------")
-    print("BaseMLP")
-    print("----------------------------------")
+    # Train & predict using BaseMLP
     mlp_classifier = train_base_mlp(training_data, training_target)
     prediction = test_base_mlp(mlp_classifier, test_data)
-    print_stats(prediction, test_target, classes_name)
+    print_stats(test_target, prediction, classes_name, "BaseMLP")
 
     # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
     #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
     # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
     #  the optimization hasn't converged yet. warnings.warn(
-    print("----------------------------------")
-    print("High Performance MLP Classifier")
-    print("----------------------------------")
+    # Train & predict using High Performance MLP Classifier
     high_performance_mlp_classifier = gridcv_using_mlp(training_data, training_target)
     prediction = test_gridcv_using_mlp(high_performance_mlp_classifier, test_data)
-    print(high_performance_mlp_classifier.best_params_)
-    print_stats(prediction, test_target, classes_name)
+    print_stats(test_target, prediction, classes_name, "High Performance MLP Classifier",
+                high_performance_mlp_classifier.best_params_)
 
 
 if __name__ == "__main__":
