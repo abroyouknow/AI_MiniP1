@@ -1,6 +1,8 @@
 import os
 import sys
 
+from ModelStatsRecorder import ModelStatsRecorder
+
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -15,6 +17,14 @@ from sklearn.metrics import confusion_matrix, classification_report
 dataPath = "../datasets/drug200.csv"
 deliverables_path = "./deliverables/"
 classes_name = ["drugA", "drugB", "drugC", "drugX", "drugY"]
+iteration_count = 2
+
+multinomialNB_recorder = ModelStatsRecorder("MultinomialNB")
+decision_tree_recorder = ModelStatsRecorder("Decision Tree")
+high_performance_decision_tree_recorder = ModelStatsRecorder("High Performance Decision Tree")
+perceptron_recorder = ModelStatsRecorder("Perceptron")
+base_mlp_recorder = ModelStatsRecorder("BaseMLP")
+high_performance_mlp_recorder = ModelStatsRecorder("High Performance MLP")
 
 
 def load_data_set():
@@ -152,8 +162,16 @@ def test_gridcv_using_mlp(high_preformance_mlp_classifier, test_data):
     return prediction
 
 
-# Print statistics relating to a prediction
-def print_stats(test_target, prediction, target_names, section_name, best_params=None):
+# record and print statistics relating to a prediction
+def recorder_and_print_stats(test_target, prediction, target_names, section_name, best_params=None,
+                             model_recorder: ModelStatsRecorder = None):
+    report = classification_report(test_target, prediction, target_names=target_names, output_dict=True)
+
+    if model_recorder is not None:
+        model_recorder.accuracy_samples.append(report["accuracy"])
+        model_recorder.macroaverage_f1_samples.append(report["macro avg"]["f1-score"])
+        model_recorder.weighted_macroaverage_f1_samples.append(report["weighted avg"]["f1-score"])
+
     print("============= {} =============\n".format(section_name))
     if best_params is not None:
         print("Grid CV parameters:\n")
@@ -179,47 +197,62 @@ def main():
     out_file = open(deliverables_path + 'drug-performance.txt', 'w')
     sys.stdout = out_file
 
-    # Train & predict using MultinomialNB
-    nb_classifier = train_naive_bayes(training_data, training_target)
-    prediction = test_naive_bayes(nb_classifier, test_data)
-    print_stats(test_target, prediction, classes_name, "MultinomialNB")
+    for i in range(iteration_count):
+        # Train & predict using MultinomialNB
+        nb_classifier = train_naive_bayes(training_data, training_target)
+        prediction = test_naive_bayes(nb_classifier, test_data)
+        recorder_and_print_stats(test_target, prediction, classes_name, "MultinomialNB",
+                                 model_recorder=multinomialNB_recorder)
 
-    # Train & predict using Decision Tree
-    dt_classifier = train_decision_tree(training_data, training_target)
-    prediction = test_decision_tree(dt_classifier, test_data)
-    print_stats(test_target, prediction, classes_name, "Decision Tree")
+        # Train & predict using Decision Tree
+        dt_classifier = train_decision_tree(training_data, training_target)
+        prediction = test_decision_tree(dt_classifier, test_data)
+        recorder_and_print_stats(test_target, prediction, classes_name, "Decision Tree",
+                                 model_recorder=decision_tree_recorder)
 
-    # Train & predict using high performance Decision Tree
-    high_performance_classifier = gridcv_using_decision_tree(training_data, training_target)
-    prediction = test_gridcv_using_decision_tree(high_performance_classifier, test_data)
-    print_stats(test_target, prediction, classes_name, "High Performance Decision Tree",
-                high_performance_classifier.best_params_)
+        # Train & predict using high performance Decision Tree
+        high_performance_classifier = gridcv_using_decision_tree(training_data, training_target)
+        prediction = test_gridcv_using_decision_tree(high_performance_classifier, test_data)
+        recorder_and_print_stats(test_target, prediction, classes_name, "High Performance Decision Tree",
+                                 high_performance_classifier.best_params_, high_performance_decision_tree_recorder)
 
-    # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
-    #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-    # Train & predict using Perceptron
-    p_classifier = train_perceptron(training_data, training_target)
-    prediction = test_perceptron(p_classifier, test_data)
-    print_stats(test_target, prediction, classes_name, "Perceptron")
+        # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
+        #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+        # Train & predict using Perceptron
+        p_classifier = train_perceptron(training_data, training_target)
+        prediction = test_perceptron(p_classifier, test_data)
+        recorder_and_print_stats(test_target, prediction, classes_name, "Perceptron",
+                                 model_recorder=perceptron_recorder)
 
-    # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
-    #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-    # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
-    #  the optimization hasn't converged yet. warnings.warn(
-    # Train & predict using BaseMLP
-    mlp_classifier = train_base_mlp(training_data, training_target)
-    prediction = test_base_mlp(mlp_classifier, test_data)
-    print_stats(test_target, prediction, classes_name, "BaseMLP")
+        # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
+        #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+        # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
+        #  the optimization hasn't converged yet. warnings.warn(
+        # Train & predict using BaseMLP
+        mlp_classifier = train_base_mlp(training_data, training_target)
+        prediction = test_base_mlp(mlp_classifier, test_data)
+        recorder_and_print_stats(test_target, prediction, classes_name, "BaseMLP",
+                                 model_recorder=base_mlp_recorder)
 
-    # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
-    #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-    # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
-    #  the optimization hasn't converged yet. warnings.warn(
-    # Train & predict using High Performance MLP Classifier
-    high_performance_mlp_classifier = gridcv_using_mlp(training_data, training_target)
-    prediction = test_gridcv_using_mlp(high_performance_mlp_classifier, test_data)
-    print_stats(test_target, prediction, classes_name, "High Performance MLP Classifier",
-                high_performance_mlp_classifier.best_params_)
+        # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
+        #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
+        # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
+        #  the optimization hasn't converged yet. warnings.warn(
+        # Train & predict using High Performance MLP Classifier
+        high_performance_mlp_classifier = gridcv_using_mlp(training_data, training_target)
+        prediction = test_gridcv_using_mlp(high_performance_mlp_classifier, test_data)
+        recorder_and_print_stats(test_target, prediction, classes_name, "High Performance MLP Classifier",
+                                 high_performance_mlp_classifier.best_params_, high_performance_mlp_recorder)
+
+    print("")
+
+    print("============= Overall Performance Results =============\n")
+    multinomialNB_recorder.print_performance_stats()
+    decision_tree_recorder.print_performance_stats()
+    high_performance_decision_tree_recorder.print_performance_stats()
+    perceptron_recorder.print_performance_stats()
+    base_mlp_recorder.print_performance_stats()
+    high_performance_mlp_classifier.print_performance_stats()
 
 
 if __name__ == "__main__":
