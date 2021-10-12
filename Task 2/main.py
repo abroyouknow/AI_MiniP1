@@ -252,7 +252,7 @@ def main():
     high_performance_decision_tree_recorder.print_performance_stats()
     perceptron_recorder.print_performance_stats()
     base_mlp_recorder.print_performance_stats()
-    high_performance_mlp_classifier.print_performance_stats()
+    high_performance_mlp_recorder.print_performance_stats()
 
 
 if __name__ == "__main__":
