@@ -17,7 +17,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 dataPath = "../datasets/drug200.csv"
 deliverables_path = "./deliverables/"
 classes_name = ["drugA", "drugB", "drugC", "drugX", "drugY"]
-iteration_count = 2
+iteration_count = 10
 
 multinomialNB_recorder = ModelStatsRecorder("MultinomialNB")
 decision_tree_recorder = ModelStatsRecorder("Decision Tree")
@@ -203,37 +203,39 @@ def main():
         # Train & predict using MultinomialNB
         nb_classifier = train_naive_bayes(training_data, training_target)
         prediction = test_naive_bayes(nb_classifier, test_data)
-        recorder_and_print_stats(test_target, prediction, classes_name, "MultinomialNB",
+        recorder_and_print_stats(test_target, prediction, classes_name, "MultinomialNB, try {}".format(i),
                                  model_recorder=multinomialNB_recorder)
 
         # Train & predict using Decision Tree
         dt_classifier = train_decision_tree(training_data, training_target)
         prediction = test_decision_tree(dt_classifier, test_data)
-        recorder_and_print_stats(test_target, prediction, classes_name, "Decision Tree",
+        recorder_and_print_stats(test_target, prediction, classes_name, "Decision Tree, try {}".format(i),
                                  model_recorder=decision_tree_recorder)
 
         # Train & predict using high performance Decision Tree
         high_performance_classifier = gridcv_using_decision_tree(training_data, training_target)
         prediction = test_gridcv_using_decision_tree(high_performance_classifier, test_data)
-        recorder_and_print_stats(test_target, prediction, classes_name, "High Performance Decision Tree",
+        recorder_and_print_stats(test_target, prediction, classes_name,
+                                 "High Performance Decision Tree, try {}".format(i),
                                  high_performance_classifier.best_params_, high_performance_decision_tree_recorder)
 
         # Train & predict using Perceptron
         p_classifier = train_perceptron(training_data, training_target)
         prediction = test_perceptron(p_classifier, test_data)
-        recorder_and_print_stats(test_target, prediction, classes_name, "Perceptron",
+        recorder_and_print_stats(test_target, prediction, classes_name, "Perceptron, try {}".format(i),
                                  model_recorder=perceptron_recorder)
 
         # Train & predict using BaseMLP
         mlp_classifier = train_base_mlp(training_data, training_target)
         prediction = test_base_mlp(mlp_classifier, test_data)
-        recorder_and_print_stats(test_target, prediction, classes_name, "BaseMLP",
+        recorder_and_print_stats(test_target, prediction, classes_name, "BaseMLP, try {}".format(i),
                                  model_recorder=base_mlp_recorder)
 
         # Train & predict using High Performance MLP Classifier
         high_performance_mlp_classifier = gridcv_using_mlp(training_data, training_target)
         prediction = test_gridcv_using_mlp(high_performance_mlp_classifier, test_data)
-        recorder_and_print_stats(test_target, prediction, classes_name, "High Performance MLP Classifier",
+        recorder_and_print_stats(test_target, prediction, classes_name,
+                                 "High Performance MLP Classifier, try {}".format(i),
                                  high_performance_mlp_classifier.best_params_, high_performance_mlp_recorder)
 
     print("")
