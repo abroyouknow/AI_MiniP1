@@ -138,7 +138,8 @@ def test_perceptron(p_classifier, test_data):
 
 
 def train_base_mlp(training_data, training_target):
-    mlp_classifier = MLPClassifier()
+    # Default hidden layers for MLPClassifier is one layer and 100 neuron
+    mlp_classifier = MLPClassifier(activation='logistic', solver='sgd')
     mlp_classifier.fit(training_data, training_target)
     return mlp_classifier
 
@@ -165,7 +166,8 @@ def test_gridcv_using_mlp(high_preformance_mlp_classifier, test_data):
 # record and print statistics relating to a prediction
 def recorder_and_print_stats(test_target, prediction, target_names, section_name, best_params=None,
                              model_recorder: ModelStatsRecorder = None):
-    report = classification_report(test_target, prediction, target_names=target_names, output_dict=True)
+    report = classification_report(test_target, prediction, target_names=target_names, output_dict=True,
+                                   zero_division=1)
 
     if model_recorder is not None:
         model_recorder.accuracy_samples.append(report["accuracy"])
@@ -182,7 +184,7 @@ def recorder_and_print_stats(test_target, prediction, target_names, section_name
     print("")
 
     print("Classification Report:\n")
-    print(classification_report(test_target, prediction, target_names=target_names))
+    print(classification_report(test_target, prediction, target_names=target_names, zero_division=1))
 
 
 def main():
@@ -216,28 +218,18 @@ def main():
         recorder_and_print_stats(test_target, prediction, classes_name, "High Performance Decision Tree",
                                  high_performance_classifier.best_params_, high_performance_decision_tree_recorder)
 
-        # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
-        #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
         # Train & predict using Perceptron
         p_classifier = train_perceptron(training_data, training_target)
         prediction = test_perceptron(p_classifier, test_data)
         recorder_and_print_stats(test_target, prediction, classes_name, "Perceptron",
                                  model_recorder=perceptron_recorder)
 
-        # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
-        #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-        # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
-        #  the optimization hasn't converged yet. warnings.warn(
         # Train & predict using BaseMLP
         mlp_classifier = train_base_mlp(training_data, training_target)
         prediction = test_base_mlp(mlp_classifier, test_data)
         recorder_and_print_stats(test_target, prediction, classes_name, "BaseMLP",
                                  model_recorder=base_mlp_recorder)
 
-        # TODO: Check warining -> UndefinedMetricWarning: Recall and F-score are ill-defined and being set to
-        #  0.0 in labels with no true samples. Use `zero_division` parameter to control this behavior.
-        # TODO: Investigate -> ConvergenceWarning: Stochastic Optimizer: Maximum iterations (200) reached and
-        #  the optimization hasn't converged yet. warnings.warn(
         # Train & predict using High Performance MLP Classifier
         high_performance_mlp_classifier = gridcv_using_mlp(training_data, training_target)
         prediction = test_gridcv_using_mlp(high_performance_mlp_classifier, test_data)
