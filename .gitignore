@@ -11,3 +11,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+#IDE
+.iws
+workspace.xml
+tasks.xml
+.idea/
