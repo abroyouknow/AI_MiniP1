@@ -57,11 +57,10 @@ def plot_data_set(data):
         else:
             print("%s is not defined in classes, error !", drug_row)
 
-    if not os.path.isfile(deliverables_path + 'Drug-distribution.pdf'):
-        fig = plt.figure()
-        plt.bar(classes_name, frequencies)
-        plt.show()
-        fig.savefig(deliverables_path + 'Drug-distribution.pdf', dpi=fig.dpi)
+    fig = plt.figure()
+    plt.bar(classes_name, frequencies)
+    plt.show()
+    fig.savefig(deliverables_path + 'Drug-distribution.pdf', dpi=fig.dpi)
 
 
 # Convert all ordinal and nominal features in numerical format

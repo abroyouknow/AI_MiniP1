@@ -30,11 +30,10 @@ def create_distribution_graph():
     for classDir in classes:
         frequencies.append(len(os.listdir(data_path + classDir)))
 
-    if not os.path.isfile(deliverables_path + 'bbc-distribution.pdf'):
-        fig = plt.figure()
-        plt.bar(classes, frequencies)
-        plt.show()
-        fig.savefig(deliverables_path + 'bbc-distribution.pdf', dpi=fig.dpi)
+    fig = plt.figure()
+    plt.bar(classes, frequencies)
+    plt.show()
+    fig.savefig(deliverables_path + 'bbc-distribution.pdf', dpi=fig.dpi)
 
     return classes
 
