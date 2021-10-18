@@ -7,7 +7,8 @@ Download the project folder 'Team_Hal9000_MiniP1.zip' and extract the files
 Create a virtual environment called 'venv' inside the project folder
 
 ```python -m venv venv
-venv\Scripts\activate.bat ```
+venv\Scripts\activate.bat 
+```
 
 ## Step 2:
 Activate virtual environment on your machine
