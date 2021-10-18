@@ -1,0 +1,1613 @@
+============= MultinomialNB, try 0 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 0 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 0 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 0 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 0 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 0 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  2  0  0]
+ [ 0  0  9  0  0]
+ [ 1  0  0  4  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.90      0.95      0.93        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.75      1.00      0.86         9
+       drugX       1.00      0.80      0.89         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.88        40
+   macro avg       0.93      0.75      0.73        40
+weighted avg       0.90      0.88      0.84        40
+
+============= MultinomialNB, try 1 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 1 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 1 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 1 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 1 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 1 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[19  0  0  1  0]
+ [ 1  0  2  0  0]
+ [ 0  0  8  0  1]
+ [ 1  0  0  4  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.86      0.95      0.90        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.80      0.89      0.84         9
+       drugX       0.80      0.80      0.80         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.82        40
+   macro avg       0.83      0.66      0.64        40
+weighted avg       0.84      0.82      0.79        40
+
+============= MultinomialNB, try 2 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 2 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 2 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 2 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 2 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 2 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[18  0  1  1  0]
+ [ 1  0  2  0  0]
+ [ 0  0  9  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.86      0.90      0.88        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.75      1.00      0.86         9
+       drugX       0.75      0.60      0.67         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.82        40
+   macro avg       0.87      0.70      0.68        40
+weighted avg       0.84      0.82      0.79        40
+
+============= MultinomialNB, try 3 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 3 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 3 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 3 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 3 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 3 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[18  0  1  1  0]
+ [ 1  0  2  0  0]
+ [ 0  0  9  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      0.90      0.92        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.75      1.00      0.86         9
+       drugX       0.71      1.00      0.83         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.85        40
+   macro avg       0.88      0.71      0.68        40
+weighted avg       0.88      0.85      0.82        40
+
+============= MultinomialNB, try 4 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 4 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 4 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 4 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 4 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 4 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 0  0  9  0  0]
+ [ 1  0  0  4  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.90      0.95      0.93        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.82      1.00      0.90         9
+       drugX       1.00      0.80      0.89         5
+       drugY       0.75      1.00      0.86         3
+
+    accuracy                           0.88        40
+   macro avg       0.89      0.75      0.71        40
+weighted avg       0.89      0.88      0.84        40
+
+============= MultinomialNB, try 5 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 5 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 5 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 5 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 5 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 5 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 1  0  2  0  0]
+ [ 0  0  9  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.82      1.00      0.90         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.93        40
+   macro avg       0.95      0.80      0.78        40
+weighted avg       0.94      0.93      0.89        40
+
+============= MultinomialNB, try 6 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 6 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 6 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 6 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 6 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 6 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 1  0  2  0  0]
+ [ 0  0  8  0  1]
+ [ 3  0  0  2  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.80      1.00      0.89        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.80      0.89      0.84         9
+       drugX       1.00      0.40      0.57         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.80        40
+   macro avg       0.85      0.59      0.59        40
+weighted avg       0.83      0.80      0.76        40
+
+============= MultinomialNB, try 7 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 7 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 7 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 7 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 7 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 7 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[18  0  1  1  0]
+ [ 1  0  2  0  0]
+ [ 0  0  9  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.86      0.90      0.88        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.75      1.00      0.86         9
+       drugX       0.60      0.60      0.60         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.80        40
+   macro avg       0.84      0.63      0.63        40
+weighted avg       0.82      0.80      0.77        40
+
+============= MultinomialNB, try 8 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 8 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 8 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 8 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 8 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 8 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[18  0  1  1  0]
+ [ 1  0  2  0  0]
+ [ 0  0  9  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      0.90      0.92        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.75      1.00      0.86         9
+       drugX       0.71      1.00      0.83         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.85        40
+   macro avg       0.88      0.71      0.68        40
+weighted avg       0.88      0.85      0.82        40
+
+============= MultinomialNB, try 9 =============
+
+Confusion Matrix:
+
+[[14  1  2  3  0]
+ [ 1  0  2  0  0]
+ [ 2  0  7  0  0]
+ [ 2  0  0  3  0]
+ [ 0  0  0  1  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.74      0.70      0.72        20
+       drugB       0.00      0.00      0.00         3
+       drugC       0.64      0.78      0.70         9
+       drugX       0.43      0.60      0.50         5
+       drugY       1.00      0.67      0.80         3
+
+    accuracy                           0.65        40
+   macro avg       0.56      0.55      0.54        40
+weighted avg       0.64      0.65      0.64        40
+
+============= Decision Tree, try 9 =============
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  3  0  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      1.00      1.00         3
+       drugC       1.00      0.89      0.94         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.97        40
+   macro avg       0.99      0.98      0.98        40
+weighted avg       0.98      0.97      0.97        40
+
+============= High Performance Decision Tree, try 9 =============
+
+Grid CV parameters:
+
+{'criterion': 'gini', 'max_depth': 3, 'min_samples_split': 2}
+
+Confusion Matrix:
+
+[[20  0  0  0  0]
+ [ 0  0  3  0  0]
+ [ 1  0  8  0  0]
+ [ 0  0  0  5  0]
+ [ 0  0  0  0  3]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.95      1.00      0.98        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.73      0.89      0.80         9
+       drugX       1.00      1.00      1.00         5
+       drugY       1.00      1.00      1.00         3
+
+    accuracy                           0.90        40
+   macro avg       0.94      0.78      0.76        40
+weighted avg       0.91      0.90      0.87        40
+
+============= Perceptron, try 9 =============
+
+Confusion Matrix:
+
+[[19  0  1  0  0]
+ [ 1  0  1  0  1]
+ [ 2  0  7  0  0]
+ [ 5  0  0  0  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.68      0.95      0.79        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.78      0.78      0.78         9
+       drugX       1.00      0.00      0.00         5
+       drugY       0.67      0.67      0.67         3
+
+    accuracy                           0.70        40
+   macro avg       0.82      0.48      0.45        40
+weighted avg       0.76      0.70      0.62        40
+
+============= BaseMLP, try 9 =============
+
+Confusion Matrix:
+
+[[18  0  2  0  0]
+ [ 1  0  2  0  0]
+ [ 4  0  5  0  0]
+ [ 5  0  0  0  0]
+ [ 0  0  3  0  0]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.64      0.90      0.75        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.42      0.56      0.48         9
+       drugX       1.00      0.00      0.00         5
+       drugY       1.00      0.00      0.00         3
+
+    accuracy                           0.57        40
+   macro avg       0.81      0.29      0.25        40
+weighted avg       0.69      0.57      0.48        40
+
+============= High Performance MLP Classifier, try 9 =============
+
+Grid CV parameters:
+
+{'activation': 'tanh', 'hidden_layer_sizes': (50, 50), 'solver': 'adam'}
+
+Confusion Matrix:
+
+[[18  0  1  1  0]
+ [ 1  0  1  0  1]
+ [ 0  0  8  0  1]
+ [ 2  0  0  3  0]
+ [ 1  0  0  0  2]]
+
+Classification Report:
+
+              precision    recall  f1-score   support
+
+       drugA       0.82      0.90      0.86        20
+       drugB       1.00      0.00      0.00         3
+       drugC       0.80      0.89      0.84         9
+       drugX       0.75      0.60      0.67         5
+       drugY       0.50      0.67      0.57         3
+
+    accuracy                           0.78        40
+   macro avg       0.77      0.61      0.59        40
+weighted avg       0.80      0.78      0.74        40
+
+
+============= Overall Performance Results =============
+
+============= MultinomialNB =============
+
+Average accuracy: 0.65
+
+Average macro-average F1: 0.5435897435897437
+
+Average weighted macro-average F1: 0.6389743589743591
+
+
+Standard Deviation accuracy: 0.0
+
+Standard Deviation macro-average F1: 0.0
+
+Standard Deviation weighted macro-average F1: 0.0
+
+============= Decision Tree =============
+
+Average accuracy: 0.975
+
+Average macro-average F1: 0.9833572453371593
+
+Average weighted macro-average F1: 0.9745695839311335
+
+
+Standard Deviation accuracy: 0.0
+
+Standard Deviation macro-average F1: 0.0
+
+Standard Deviation weighted macro-average F1: 0.0
+
+============= High Performance Decision Tree =============
+
+Average accuracy: 0.9
+
+Average macro-average F1: 0.7551219512195122
+
+Average weighted macro-average F1: 0.8678048780487805
+
+
+Standard Deviation accuracy: 0.0
+
+Standard Deviation macro-average F1: 0.0
+
+Standard Deviation weighted macro-average F1: 0.0
+
+============= Perceptron =============
+
+Average accuracy: 0.7
+
+Average macro-average F1: 0.44722222222222224
+
+Average weighted macro-average F1: 0.6208333333333333
+
+
+Standard Deviation accuracy: 0.0
+
+Standard Deviation macro-average F1: 0.0
+
+Standard Deviation weighted macro-average F1: 0.0
+
+============= BaseMLP =============
+
+Average accuracy: 0.575
+
+Average macro-average F1: 0.24523809523809526
+
+Average weighted macro-average F1: 0.4821428571428571
+
+
+Standard Deviation accuracy: 0.0
+
+Standard Deviation macro-average F1: 0.0
+
+Standard Deviation weighted macro-average F1: 0.0
+
+============= High Performance MLP =============
+
+Average accuracy: 0.84
+
+Average macro-average F1: 0.6721090907381022
+
+Average weighted macro-average F1: 0.805965709301396
+
+
+Standard Deviation accuracy: 0.04440970864824742
+
+Standard Deviation macro-average F1: 0.060368171881244936
+
+Standard Deviation weighted macro-average F1: 0.045158549329112244
+

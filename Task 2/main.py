@@ -1,3 +1,7 @@
+#Joseph D'Onofrio - 21955039
+#Thomas Flynn - 40034877
+#Cristian Milatinov - 40098297
+
 import os
 import sys
 

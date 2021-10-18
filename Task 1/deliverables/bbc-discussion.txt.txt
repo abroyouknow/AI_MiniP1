@@ -1,0 +1,15 @@
+In a separate plain text file called bbc-discussion.txt, explain in 1 to 2 paragraphs:
+(a) what metric is best suited to this dataset/task and why (see step (2))
+(b) why the performance of steps (8-10) are the same or are different than those of step (7) above
+
+a) Based on the fact that the classes are not evenly represented (greater than 20% difference between most and least represented classes),
+Accuracy would not be the best metric for this task/dataset. Based on the results of this task using a variety of smoothing values 
+the F-1 Measure seems to be best suited as it takes into account the variations in both precision and recall. Both precision and recall
+vary with the changes in smoothing values which allow us to conclude that F-1 measure, being the most inclusive of the metrics is the best
+suited for the analysis of this dataset/task.
+
+
+b) The performance of steps (8-10) is the same in the case of 0.9 smoothing and slightly worse in the case of 0.0001 smoothing. 
+These results are not surprising as 0.9 is very close to 1 which is the default smoothing value applied by the applied algorithm.
+It is also not surprising to see that the 0.0001 smoothing performed more poorly as such a low value should cause the results to 
+resemble those of a 0 smoothing Naive Bayes classification which we know yields poorer results than with smoothing.

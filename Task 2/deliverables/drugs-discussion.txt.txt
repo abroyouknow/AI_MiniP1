@@ -1,0 +1,11 @@
+Redo steps 6, 10 times for each model and append the average accuracy, average macro-average F1, average weighted-average F1 as well as the standard deviation for the accuracy, the standard deviation
+of the macro-average F1, and the standard deviation of the weighted-average F1 at the end of the file
+drugs-performance.txt. Does the same model give you the same performance every time? Explain in a
+plain text file called drugs-discussion.txt. A 1 or 2 paragraph discussion is expected.
+
+The results of step 8 reveal that the same model will yield the same results every single time, with the exception of the 'High Performance MLP' classifier.
+For all but the 'High Performance MLP' classifier this level of consistency is to be expected as all of the variables remain unchanged.
+That is: the alogorithm, training set, test set and number of classes remain the same throughout every iteration. 
+The lack of variation in the order of instances as well as the parameter of the algorithm guarantee that for n iterations of such a test the results will ALWAYS be identical.
+This is NOT true for the 'High Performance MLP' classifier as this classifier has several hyperparameter possibilities which cause the output results to fluctuate slightly.
+Looking at the standard deviations of the metrics for this algorithm we see a very small deviation (at most 6.03%) from which we can still conclude that the algorithm is fairly consistent.
