@@ -18,6 +18,9 @@ from sklearn.linear_model import Perceptron
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import confusion_matrix, classification_report
 
+# change the current directory to the directory where the script file is running
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 dataPath = "../datasets/drug200.csv"
 deliverables_path = "./deliverables/"
 classes_name = ["drugA", "drugB", "drugC", "drugX", "drugY"]

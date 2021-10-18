@@ -14,6 +14,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import confusion_matrix, classification_report
 
+# change the current directory to the directory where the script file is running
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
+
 data_path = "../datasets/BBC/"
 deliverables_path = "./deliverables/"
 
