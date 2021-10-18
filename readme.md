@@ -13,7 +13,8 @@ Activate virtual environment on your machine
 run the following commands:
 ``` pip install matplotlib
  pip install pandas
- pip install sklearn ```
+ pip install sklearn 
+ ```
 
 ##Step 4: 
 if not present add the datasets to the 'datasets' folder
